@@ -2,7 +2,7 @@
     <img src="https://binbashar.github.io/terraform-aws-cost-billing-alarm/figures/binbash.png" alt="drawing" width="350"/>
 </div>
 <div align="right">
-  <img src="figures/binbash-leverage-terraform.png" alt="leverage" width="230"/>
+  <img src="https://binbashar.github.io/terraform-aws-cost-billing-alarm/figures/binbash-leverage-terraform.png" alt="leverage" width="230"/>
 </div>
 
 # AWS Billing Cloudwatch Alarm terraform module: terraform-aws-cost-mgmt-billing-alarm

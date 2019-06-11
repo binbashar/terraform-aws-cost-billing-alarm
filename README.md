@@ -110,4 +110,4 @@ module "billing_cloudwatch_alert" {
 * If `aws_sns_topic_enabled = true` the alarm action is automatically set to the created SNS topic, `billing-alarm-notification-${lower(currency)}-${aws_env}`. **YOU MUST MANUALLY SUBSCRIBE TO THIS SNS TOPIC.**
 
     !! MANUAL STEP :
-    !! Subscribe emails to `arn:aws:sns:us-east-1:123456789012:billing-alarm-notification-usd-dev for billing alarms`
+    !! Subscribe emails to `arn:aws:sns:us-east-1:111111111111:billing-alarm-notification-usd-dev for billing alarms`

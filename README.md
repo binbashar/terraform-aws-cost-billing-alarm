@@ -12,10 +12,10 @@ Adds a billing alert with optional sns topic creation (or use a pre-existing one
 If `aws_sns_topic_enabled = true` then you'll still need to subscribe to the created SNS topic manually (please check **Important Consderations** section for detailed info).
 
 ## Releases
-- **Versions:** `0.x.y` (Terraform 0.11.x compatible)
+- **Versions:** `<= 0.x.y` (Terraform 0.11.x compatible)
     - eg: https://registry.terraform.io/modules/binbashar/cost-budget/aws/0.0.1
 
-- **Versions:** `1.x.y` (Terraform 0.12.x compatible -> **WIP**)
+- **Versions:** `>= 1.x.y` (Terraform 0.12.x compatible -> **WIP**)
     - eg: https://registry.terraform.io/modules/binbashar/cost-budget/aws/1.0.0
 
 ## Inputs

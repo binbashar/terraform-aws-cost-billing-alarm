@@ -31,3 +31,12 @@ doc: ## doc: A utility to generate documentation from Terraform modules in vario
 
 lint: ## lint: TFLint is a Terraform linter for detecting errors that can not be detected by terraform plan.
 	docker run --rm -v ${TF_PWD_DIR}:/data -t wata727/tflint --deep
+
+changelog: ## git changelog (https://github.com/git-chglog/git-chglog)
+	# pre-req -> https://github.com/pnikosis/semtag
+	docker run -it --rm -v "${TF_PWD_DIR}:/data" binbash/git-chglog --init
+	docker run -it --rm -v "${TF_PWD_DIR}:/data" binbash/git-chglog -o CHANGELOG.md --next-tag `semtag final -s minor -o`
+
+release: ##
+	segtag get
+	semtag final -s minor

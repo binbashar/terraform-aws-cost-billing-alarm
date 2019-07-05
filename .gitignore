@@ -5,6 +5,7 @@
 !*.dockeringnore
 !*.hosts
 !/.gitignore
+!/.chglog
 !/.gitallowed
 !*.gitkeep
 

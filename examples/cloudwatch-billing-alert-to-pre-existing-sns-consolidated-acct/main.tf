@@ -12,5 +12,5 @@ output "sns_topic" {
 }
 
 # Will output the following:
-# arn:aws:lambda:us-east-1:111111111111:function:bb-root-org-notify_slack
+# arn:aws:sns:us-east-1:111111111111:function:bb-root-org-notify_slack
 

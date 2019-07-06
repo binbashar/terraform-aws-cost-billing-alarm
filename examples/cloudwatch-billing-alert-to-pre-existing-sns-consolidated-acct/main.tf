@@ -1,5 +1,5 @@
 module "billing_cloudwatch_alert" {
-  source = "../../cost-mgmt-billing-alarm-bb"
+  source = "../../../terraform-aws-cost-billing-alarm"
 
   aws_env                   = "${var.aws_profile}"
   monthly_billing_threshold = 500
@@ -8,7 +8,7 @@ module "billing_cloudwatch_alert" {
 }
 
 output "sns_topic" {
-  value = "${module.billing_cloudwatch_alert.sns_topic}"
+  value = "${module.billing_cloudwatch_alert.sns_topic_arn}"
 }
 
 # Will output the following:

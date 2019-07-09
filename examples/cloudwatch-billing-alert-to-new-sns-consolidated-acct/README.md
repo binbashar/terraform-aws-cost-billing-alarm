@@ -45,8 +45,7 @@ output "sns_topic" {
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
-### For Private Security Groups
-#### sec-group-private-tcp
+## cloudwatch-billing-alert-to-new-sns-consolidated-acct
 ```terraform
 module "billing_cloudwatch_alert" {
   source = "../../cost-mgmt-billing-alarm-bb"

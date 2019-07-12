@@ -3,7 +3,11 @@
 
 
 <a name="v0.0.3"></a>
-## [v0.0.3] - 0001-01-01
+## [v0.0.3] - 2019-07-12
+### Pull Requests
+- Merge pull request [#3](https://github.com/binbashar/terraform-aws-cost-billing-alarm/issues/3) from binbashar/examples-makefile-terratest
+- Merge pull request [#2](https://github.com/binbashar/terraform-aws-cost-billing-alarm/issues/2) from binbashar/example-code-fix
+
 
 <a name="v0.0.2"></a>
 ## [v0.0.2] - 2019-07-05

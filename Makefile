@@ -21,6 +21,7 @@ define TF_CMD_PREFIX
 docker run --rm \
 -v ${TF_PWD_DIR}:${TF_PWD_CONT_DIR}:rw \
 --entrypoint=${TF_DOCKER_ENTRYPOINT} \
+-w ${TF_PWD_CONT_DIR} \
 -it ${TF_DOCKER_IMAGE}:${TF_VER}
 endef
 
@@ -77,7 +78,7 @@ version: ## Show terraform version
 	-t ${TF_DOCKER_IMAGE}:${TF_VER} version
 
 format: ## The terraform fmt is used to rewrite tf conf files to a canonical format and style.
-	${TF_CMD_PREFIX} fmt ${TF_PWD_CONT_DIR}
+	${TF_CMD_PREFIX} fmt
 
 doc: ## A utility to generate documentation from Terraform modules in various output formats.
 	docker run --rm -v ${TF_PWD_DIR}:/data -t binbash/terraform-docs markdown table /data

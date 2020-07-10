@@ -1,27 +1,69 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+
 <a name="unreleased"></a>
 ## [Unreleased]
 
 
+
+<a name="v1.0.0"></a>
+## [v1.0.0] - 2020-07-10
+
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+
+
 <a name="v0.0.3"></a>
 ## [v0.0.3] - 2019-07-12
-### Pull Requests
-- Merge pull request [#3](https://github.com/binbashar/terraform-aws-cost-billing-alarm/issues/3) from binbashar/examples-makefile-terratest
-- Merge pull request [#2](https://github.com/binbashar/terraform-aws-cost-billing-alarm/issues/2) from binbashar/example-code-fix
+
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
 
 
 <a name="v0.0.2"></a>
 ## [v0.0.2] - 2019-07-05
-### Pull Requests
-- Merge pull request [#1](https://github.com/binbashar/terraform-aws-cost-billing-alarm/issues/1) from binbashar/tf-0.12-readme
+
+- 
+- 
+- 
+- 
+- 
 
 
 <a name="v0.0.1"></a>
 ## [v0.0.1] - 2019-06-11
 
+- 
+
+
 <a name="0.0.1"></a>
 ## 0.0.1 - 2019-06-11
 
-[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v0.0.3...HEAD
+- 
+- 
+- 
+- 
+
+
+[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.0...HEAD
+[v1.0.0]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v0.0.3...v1.0.0
 [v0.0.3]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v0.0.2...v0.0.3
 [v0.0.2]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v0.0.1...v0.0.2
 [v0.0.1]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/0.0.1...v0.0.1

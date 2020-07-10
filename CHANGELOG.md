@@ -7,9 +7,17 @@ All notable changes to this project will be documented in this file.
 
 
 
+<a name="v1.0.1"></a>
+## [v1.0.1] - 2020-07-10
+
+- 
+- 
+
+
 <a name="v1.0.0"></a>
 ## [v1.0.0] - 2020-07-10
 
+- 
 - 
 - 
 - 
@@ -62,7 +70,8 @@ All notable changes to this project will be documented in this file.
 - 
 
 
-[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.1...HEAD
+[v1.0.1]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v0.0.3...v1.0.0
 [v0.0.3]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v0.0.2...v0.0.3
 [v0.0.2]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v0.0.1...v0.0.2

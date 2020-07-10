@@ -39,7 +39,7 @@ The module outputs one block, sns_topic. Access it like this:
 
 ```
 output "sns_topic" {
-  value = "${module.billing_alert.sns_topic}"
+  value = module.billing_alert.sns_topic
 }
 ```
 
@@ -50,13 +50,13 @@ output "sns_topic" {
 module "billing_cloudwatch_alert" {
   source = "../../cost-mgmt-billing-alarm-bb"
 
-  aws_env                   = "${var.aws_profile}"
+  aws_env                   = var.aws_profile
   monthly_billing_threshold = 500
   currency                  = "USD"
   aws_sns_topic_arn         = "arn:aws:lambda:us-east-1:111111111111:function:bb-root-org-notify_slack"
 }
 
 output "sns_topic" {
-  value = "${module.billing_cloudwatch_alert.sns_topic}"
+  value = module.billing_cloudwatch_alert.sns_topic
 }
 ```

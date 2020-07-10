@@ -5,11 +5,13 @@
 # Except
 #
 !*.env.example
+!*.circleci
 !*.dockeringnore
 !*.hosts
 !/.gitignore
 !/.chglog
 !/.gitallowed
+!/.github
 !*.gitkeep
 
 # SSH keys #
@@ -65,6 +67,8 @@ Thumbs.db
 *.iml
 *.ipr
 .vscode
+/src
+/venv
 
 # Custom Project tools files #
 ########################
@@ -85,3 +89,8 @@ Thumbs.db
 # Module directory
 #
 .terraform
+#
+# Terratest
+#
+tests/vendor/
+tests/Gopkg.*

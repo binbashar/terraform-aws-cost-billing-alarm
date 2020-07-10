@@ -1,8 +1,8 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/binbash.png" alt="drawing" width="350"/>
+    <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/binbash.png" alt="drawing" width="250"/>
 </div>
 <div align="right">
-  <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/binbash-leverage-terraform.png" alt="leverage" width="230"/>
+  <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/binbash-leverage-terraform.png" alt="leverage" width="130"/>
 </div>
 
 # AWS Billing Cloudwatch Alarm terraform module: terraform-aws-cost-mgmt-billing-alarm
@@ -118,3 +118,23 @@ module "billing_cloudwatch_alert" {
 
     !! MANUAL STEP :
     !! Subscribe emails to `arn:aws:sns:us-east-1:111111111111:billing-alarm-notification-usd-dev for billing alarms`
+    
+ # Release Management
+
+## Docker based makefile commands
+- https://cloud.docker.com/u/binbash/repository/docker/binbash/git-release
+- https://github.com/binbashar/terraform-aws-cost-billing-alarm/blob/master/Makefile
+
+Root directory `Makefile` has the automated steps (to be integrated with **CircleCI jobs** []() )
+
+### CircleCi PR auto-release job
+<div align="left">
+  <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/circleci.png" alt="leverage-circleci" width="130"/>
+</div>
+
+- https://circleci.com/gh/binbashar/terraform-aws-cost-billing-alarm
+- **NOTE:** Will only run after merged PR.
+
+- [**pipeline-job**](https://circleci.com/gh/binbashar/terraform-aws-cost-billing-alarm) (**NOTE:** Will only run after merged PR)
+- [**releases**](https://github.com/binbashar/terraform-aws-cost-billing-alarm/releases)
+- [**changelog**](https://github.com/binbashar/terraform-aws-cost-billing-alarm/blob/master/CHANGELOG.md)

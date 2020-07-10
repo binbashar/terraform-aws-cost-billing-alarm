@@ -3,7 +3,7 @@
 # if(var.aws_sns_topic_arn != "" && var.aws_account_id != "")
 #
 resource "aws_cloudwatch_metric_alarm" "account_billing_alarm_to_existing_sns" {
-  count               = "${var.aws_sns_topic_arn != "" && var.aws_account_id != "" ? 1 : 0}"
+  count               = var.aws_sns_topic_arn != "" && var.aws_account_id != "" ? 1 : 0
   alarm_name          = "account-billing-alarm-${lower(var.currency)}-${var.aws_env}"
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = "1"
@@ -12,15 +12,15 @@ resource "aws_cloudwatch_metric_alarm" "account_billing_alarm_to_existing_sns" {
   period              = "28800"
   statistic           = "Maximum"
   alarm_description   = "Billing alarm account ${var.aws_account_id} >= US$ ${var.monthly_billing_threshold}"
-  threshold           = "${var.monthly_billing_threshold}"
-  alarm_actions       = ["${var.aws_sns_topic_arn}"]
+  threshold           = var.monthly_billing_threshold
+  alarm_actions       = [var.aws_sns_topic_arn]
 
   dimensions = {
-    Currency      = "${var.currency}"
-    LinkedAccount = "${var.aws_account_id}"
+    Currency      = var.currency
+    LinkedAccount = var.aws_account_id
   }
 
-  tags = "${var.tags}"
+  tags = var.tags
 }
 
 #
@@ -28,7 +28,7 @@ resource "aws_cloudwatch_metric_alarm" "account_billing_alarm_to_existing_sns" {
 # if(var.aws_sns_topic_arn != "" && var.aws_account_id == "")
 #
 resource "aws_cloudwatch_metric_alarm" "consolidated_accounts_billing_alarm_to_existing_sns" {
-  count               = "${var.aws_sns_topic_arn != "" && var.aws_account_id == "" ? 1 : 0}"
+  count               = var.aws_sns_topic_arn != "" && var.aws_account_id == "" ? 1 : 0
   alarm_name          = "account-billing-alarm-${lower(var.currency)}-${var.aws_env}"
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = "1"
@@ -37,14 +37,14 @@ resource "aws_cloudwatch_metric_alarm" "consolidated_accounts_billing_alarm_to_e
   period              = "28800"
   statistic           = "Maximum"
   alarm_description   = "Billing consolidated alarm >= US$ ${var.monthly_billing_threshold}"
-  threshold           = "${var.monthly_billing_threshold}"
-  alarm_actions       = ["${var.aws_sns_topic_arn}"]
+  threshold           = var.monthly_billing_threshold
+  alarm_actions       = [var.aws_sns_topic_arn]
 
   dimensions = {
-    Currency = "${var.currency}"
+    Currency = var.currency
   }
 
-  tags = "${var.tags}"
+  tags = var.tags
 }
 
 #
@@ -52,10 +52,10 @@ resource "aws_cloudwatch_metric_alarm" "consolidated_accounts_billing_alarm_to_e
 # if(var.aws_sns_topic_arn == "")
 #
 resource "aws_sns_topic" "sns_alert_topic" {
-  count = "${var.aws_sns_topic_arn == "" ? 1 : 0}"
+  count = var.aws_sns_topic_arn == "" ? 1 : 0
   name  = "billing-alarm-notification-${lower(var.currency)}-${var.aws_env}"
 
-  tags = "${var.tags}"
+  tags = var.tags
 }
 
 #
@@ -63,7 +63,7 @@ resource "aws_sns_topic" "sns_alert_topic" {
 # if(var.aws_sns_topic_arn == "" && var.aws_account_id != "")
 #
 resource "aws_cloudwatch_metric_alarm" "account_billing_alarm_to_new_sns" {
-  count               = "${var.aws_sns_topic_arn == "" && var.aws_account_id != "" ? 1 : 0}"
+  count               = var.aws_sns_topic_arn == "" && var.aws_account_id != "" ? 1 : 0
   alarm_name          = "account-billing-alarm-${lower(var.currency)}-${var.aws_env}"
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = "1"
@@ -72,15 +72,15 @@ resource "aws_cloudwatch_metric_alarm" "account_billing_alarm_to_new_sns" {
   period              = "28800"
   statistic           = "Maximum"
   alarm_description   = "Billing alarm account ${var.aws_account_id} >= US$ ${var.monthly_billing_threshold}"
-  threshold           = "${var.monthly_billing_threshold}"
-  alarm_actions       = ["${aws_sns_topic.sns_alert_topic.arn}"]
+  threshold           = var.monthly_billing_threshold
+  alarm_actions       = [aws_sns_topic.sns_alert_topic[0].arn]
 
   dimensions = {
-    Currency      = "${var.currency}"
-    LinkedAccount = "${var.aws_account_id}"
+    Currency      = var.currency
+    LinkedAccount = var.aws_account_id
   }
 
-  tags = "${var.tags}"
+  tags = var.tags
 }
 
 #
@@ -88,7 +88,7 @@ resource "aws_cloudwatch_metric_alarm" "account_billing_alarm_to_new_sns" {
 # if(var.aws_sns_topic_arn == "" && var.aws_account_id == "")
 #
 resource "aws_cloudwatch_metric_alarm" "consolidated_accounts_billing_alarm_to_new_sns" {
-  count               = "${var.aws_sns_topic_arn == "" && var.aws_account_id == "" ? 1 : 0}"
+  count               = var.aws_sns_topic_arn == "" && var.aws_account_id == "" ? 1 : 0
   alarm_name          = "account-billing-alarm-${lower(var.currency)}-${var.aws_env}"
   comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = "1"
@@ -97,12 +97,12 @@ resource "aws_cloudwatch_metric_alarm" "consolidated_accounts_billing_alarm_to_n
   period              = "28800"
   statistic           = "Maximum"
   alarm_description   = "Billing consolidated alarm >= US$ ${var.monthly_billing_threshold}"
-  threshold           = "${var.monthly_billing_threshold}"
-  alarm_actions       = ["${aws_sns_topic.sns_alert_topic.arn}"]
+  threshold           = var.monthly_billing_threshold
+  alarm_actions       = [aws_sns_topic.sns_alert_topic[0].arn]
 
   dimensions = {
-    Currency = "${var.currency}"
+    Currency = var.currency
   }
 
-  tags = "${var.tags}"
+  tags = var.tags
 }

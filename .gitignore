@@ -93,4 +93,4 @@ Thumbs.db
 # Terratest
 #
 tests/vendor/
-#tests/Gopkg.*
+tests/Gopkg.*

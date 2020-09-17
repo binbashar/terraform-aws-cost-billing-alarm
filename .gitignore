@@ -8,7 +8,8 @@
 !*.circleci
 !*.dockeringnore
 !*.hosts
-!/.gitignore
+!.hosts.example
+!*.gitignore
 !/.chglog
 !/.gitallowed
 !/.github
@@ -19,6 +20,7 @@
 ############
 id_rsa
 id_dsa
+keys/
 
 # OS generated files #
 ######################
@@ -79,8 +81,17 @@ Thumbs.db
 *.pgpass
 *.vagrant
 
-# TF Project files #
+# Project files #
 ####################
+#
+# Secret Files
+#
+*secrets.dec.*
+#
+# Scripts and Makefiles
+#
+/@bin
+!/@bin/scripts
 #
 # Compiled files
 #

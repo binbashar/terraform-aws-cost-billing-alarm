@@ -135,8 +135,7 @@ you should initialize all the necessary helper **Makefiles**.
 
 #### How? 
 You must execute the `make init-makefiles` command  at the root context
-
-     
+   
 ```shell
 ╭─delivery at delivery-I7567 in ~/terraform/terraform-aws-backup-by-tags on master✔ 20-09-17
 ╰─⠠⠵ make
@@ -166,7 +165,7 @@ Available Commands:
 ╰─⠠⠵ make format-check 
 docker run --rm -v /home/delivery/Binbash/repos/Leverage/terraform/terraform-aws-backup-by-tags:"/go/src/project/":rw -v :/config -v /common.config:/common-config/common.config -v ~/.ssh:/root/.ssh -v ~/.gitconfig:/etc/gitconfig -v ~/.aws/bb:/root/.aws/bb -e AWS_SHARED_CREDENTIALS_FILE=/root/.aws/bb/credentials -e AWS_CONFIG_FILE=/root/.aws/bb/config --entrypoint=/bin/terraform -w "/go/src/project/" -it binbash/terraform-awscli-slim:0.12.28 fmt -check
 ```
-    
+
  # Release Management
 
 ### CircleCi PR auto-release job

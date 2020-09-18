@@ -1,8 +1,10 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/binbash.png" alt="drawing" width="250"/>
+    <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/binbash.png"
+     alt="drawing" width="250"/>
 </div>
 <div align="right">
-  <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/binbash-leverage-terraform.png" alt="leverage" width="130"/>
+  <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/binbash-leverage-terraform.png"
+   alt="leverage" width="130"/>
 </div>
 
 # AWS Billing Cloudwatch Alarm terraform module: terraform-aws-cost-mgmt-billing-alarm
@@ -171,7 +173,8 @@ docker run --rm -v /home/delivery/Binbash/repos/Leverage/terraform/terraform-aws
 ### CircleCi PR auto-release job
 
 <div align="left">
-  <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/circleci.png" alt="leverage-circleci" width="130"/>
+  <img src="https://raw.githubusercontent.com/binbashar/terraform-aws-cost-billing-alarm/master/figures/circleci.png"
+   alt="leverage-circleci" width="130"/>
 </div>
 
 - [**pipeline-job**](https://circleci.com/gh/binbashar/terraform-aws-cost-billing-alarm) (**NOTE:** Will only run after merged PR)

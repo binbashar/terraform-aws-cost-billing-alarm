@@ -7,6 +7,12 @@ All notable changes to this project will be documented in this file.
 
 
 
+<a name="v1.0.6"></a>
+## [v1.0.6] - 2020-09-24
+
+- BBL-381 | upgrading circleci VM executor
+
+
 <a name="v1.0.5"></a>
 ## [v1.0.5] - 2020-09-18
 
@@ -91,7 +97,8 @@ All notable changes to this project will be documented in this file.
 - Initial commit
 
 
-[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.5...HEAD
+[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.6...HEAD
+[v1.0.6]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.5...v1.0.6
 [v1.0.5]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.4...v1.0.5
 [v1.0.4]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.3...v1.0.4
 [v1.0.3]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.2...v1.0.3

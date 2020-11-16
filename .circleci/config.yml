@@ -194,11 +194,11 @@ jobs:
           command: aws ec2 describe-instances --region us-east-1 --profile $AWS_PROFILE_NAME
 
       - run:
-          name: test3-terratests-dep-init
+          name: test-terratests-dep-init
           command: make terratest-dep-init
 
       - run:
-          name: test3-terratests-go-test
+          name: test-terratests-go-test
           command: make terratest-go-test
 
       - slack/notify:

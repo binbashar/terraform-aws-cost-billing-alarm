@@ -2,6 +2,7 @@
 SHELL         := /bin/bash
 MAKEFILE_PATH := ./Makefile
 MAKEFILES_DIR := ./@bin/makefiles
+MAKEFILES_VER := v0.1.5
 
 help:
 	@echo 'Available Commands:'
@@ -13,9 +14,10 @@ help:
 init-makefiles: ## initialize makefiles
 	rm -rf ${MAKEFILES_DIR}
 	mkdir -p ${MAKEFILES_DIR}
-	git clone https://github.com/binbashar/le-dev-makefiles.git ${MAKEFILES_DIR}
+	git clone https://github.com/binbashar/le-dev-makefiles.git ${MAKEFILES_DIR} -q
+	cd ${MAKEFILES_DIR} && git checkout ${MAKEFILES_VER} -q
 
 -include ${MAKEFILES_DIR}/circleci/circleci.mk
 -include ${MAKEFILES_DIR}/release-mgmt/release.mk
--include ${MAKEFILES_DIR}/terraform12/terraform12.mk
--include ${MAKEFILES_DIR}/terratest12/terratest12.mk
+-include ${MAKEFILES_DIR}/terraform13/terraform13.mk
+-include ${MAKEFILES_DIR}/terratest13/terratest13.mk

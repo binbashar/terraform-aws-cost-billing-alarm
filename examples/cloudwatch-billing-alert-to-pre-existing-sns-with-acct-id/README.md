@@ -28,7 +28,6 @@ $ make apply
 Note that this example may create resources which can cost money (AWS EC2, for example). Run `terraform destroy` or `make destroy`
 when you don't need these resources.
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Outputs
 
 | Name | Description |
@@ -42,8 +41,6 @@ output "sns_topic" {
   value = module.billing_alert.sns_topic
 }
 ```
-
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## cloudwatch-billing-alert-to-pre-existing-sns-consolidated-acct
 ```terraform

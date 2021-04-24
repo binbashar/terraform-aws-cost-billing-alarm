@@ -11,7 +11,7 @@ resource "aws_cloudwatch_metric_alarm" "account_billing_alarm_to_existing_sns" {
   namespace           = "AWS/Billing"
   period              = "28800"
   statistic           = "Maximum"
-  alarm_description   = "Billing alarm account ${var.aws_account_id} >= US$ ${var.monthly_billing_threshold}"
+  alarm_description   = "Billing alarm account ${var.aws_account_id} >= ${var.currency} ${var.monthly_billing_threshold}"
   threshold           = var.monthly_billing_threshold
   alarm_actions       = [var.aws_sns_topic_arn]
 
@@ -36,7 +36,7 @@ resource "aws_cloudwatch_metric_alarm" "consolidated_accounts_billing_alarm_to_e
   namespace           = "AWS/Billing"
   period              = "28800"
   statistic           = "Maximum"
-  alarm_description   = "Billing consolidated alarm >= US$ ${var.monthly_billing_threshold}"
+  alarm_description   = "Billing consolidated alarm >= ${var.currency} ${var.monthly_billing_threshold}"
   threshold           = var.monthly_billing_threshold
   alarm_actions       = [var.aws_sns_topic_arn]
 
@@ -71,7 +71,7 @@ resource "aws_cloudwatch_metric_alarm" "account_billing_alarm_to_new_sns" {
   namespace           = "AWS/Billing"
   period              = "28800"
   statistic           = "Maximum"
-  alarm_description   = "Billing alarm account ${var.aws_account_id} >= US$ ${var.monthly_billing_threshold}"
+  alarm_description   = "Billing alarm account ${var.aws_account_id} >= ${var.currency} ${var.monthly_billing_threshold}"
   threshold           = var.monthly_billing_threshold
   alarm_actions       = [aws_sns_topic.sns_alert_topic[0].arn]
 
@@ -96,7 +96,7 @@ resource "aws_cloudwatch_metric_alarm" "consolidated_accounts_billing_alarm_to_n
   namespace           = "AWS/Billing"
   period              = "28800"
   statistic           = "Maximum"
-  alarm_description   = "Billing consolidated alarm >= US$ ${var.monthly_billing_threshold}"
+  alarm_description   = "Billing consolidated alarm >= ${var.currency} ${var.monthly_billing_threshold}"
   threshold           = var.monthly_billing_threshold
   alarm_actions       = [aws_sns_topic.sns_alert_topic[0].arn]
 

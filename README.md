@@ -56,7 +56,7 @@ If `aws_sns_topic_enabled = true` then you'll still need to subscribe to the cre
 The module outputs one block,.sns_topic_arn. Access it like this:
 
 ```
-output .sns_topic_arn" {
+output "sns_topic_arn" {
   value = "${module.billing_alert.sns_topic_arn}"
 }
 ```
@@ -75,7 +75,7 @@ module "billing_alert" {
   currency = "USD"
 }
 
-output .sns_topic_arn" {
+output "sns_topic_arn" {
   value = "${module.billing_alert.sns_topic_arn}"
 }
 # Will output the following:
@@ -105,7 +105,7 @@ module "billing_alert" {
   currency = "USD"
 }
 
-output .sns_topic_arn" {
+output "sns_topic_arn" {
   value = "${module.billing_alert.sns_topic_arn}"
 }
 # Will output the following:

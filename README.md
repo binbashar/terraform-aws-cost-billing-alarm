@@ -53,11 +53,11 @@ If `aws_sns_topic_enabled = true` then you'll still need to subscribe to the cre
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
-The module outputs one block, sns_topic. Access it like this:
+The module outputs one block,.sns_topic_arn. Access it like this:
 
 ```
-output "sns_topic" {
-  value = "${module.billing_alert.sns_topic}"
+output "sns_topic_arn" {
+  value = "${module.billing_alert.sns_topic_arn}"
 }
 ```
 
@@ -67,7 +67,7 @@ output "sns_topic" {
 #### cloudwatch-billing-alert-to-new-sns-with-acct-id
 ```terraform
 module "billing_alert" {
-  source = "billtrust/billing-alarm/aws"
+  source = "binbashar/cost-billing-alarm/aws"
 
   aws_env = "${var.aws_profile}"
   aws_account_id = 111111111111
@@ -75,8 +75,8 @@ module "billing_alert" {
   currency = "USD"
 }
 
-output "sns_topic" {
-  value = "${module.billing_alert.sns_topic}"
+output "sns_topic_arn" {
+  value = "${module.billing_alert.sns_topic_arn}"
 }
 # Will output the following:
 # arn:aws:sns:us-east-1:111111111111:billing-alarm-notification-usd-dev for billing alarms
@@ -85,7 +85,7 @@ output "sns_topic" {
 #### cloudwatch-billing-alert-to-pre-existing-sns-with-acct-id
 ``` terraform
 module "billing_cloudwatch_alert" {
-  source = "billtrust/billing-alarm/aws"
+  source = "binbashar/cost-billing-alarm/aws"
 
   aws_env = "${var.aws_profile}"
   aws_account_id = 111111111111
@@ -98,15 +98,15 @@ module "billing_cloudwatch_alert" {
 #### cloudwatch-billing-alert-to-new-sns-with-consolidated-acct
 ```terraform
 module "billing_alert" {
-  source = "billtrust/billing-alarm/aws"
+  source = "binbashar/cost-billing-alarm/aws"
 
   aws_env = "${var.aws_profile}"
   monthly_billing_threshold = 500
   currency = "USD"
 }
 
-output "sns_topic" {
-  value = "${module.billing_alert.sns_topic}"
+output "sns_topic_arn" {
+  value = "${module.billing_alert.sns_topic_arn}"
 }
 # Will output the following:
 # arn:aws:sns:us-east-1:111111111111:billing-alarm-notification-usd-dev for billing alarms
@@ -115,7 +115,7 @@ output "sns_topic" {
 #### cloudwatch-billing-alert-to-pre-existing-sns-consolidated-acct
 ``` terraform
 module "billing_cloudwatch_alert" {
-  source = "billtrust/billing-alarm/aws"
+  source = "binbashar/cost-billing-alarm/aws"
 
   aws_env = "${var.aws_profile}"
   monthly_billing_threshold = 500

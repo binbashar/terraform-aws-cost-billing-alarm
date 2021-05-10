@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file.
 
 
 
+<a name="v1.0.12"></a>
+## [v1.0.12] - 2021-05-10
+
+- fixed typo
+- update reference to tf repo and output name
+
+
 <a name="v1.0.11"></a>
 ## [v1.0.11] - 2021-04-26
 
@@ -128,7 +135,8 @@ All notable changes to this project will be documented in this file.
 - Initial commit
 
 
-[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.11...HEAD
+[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.12...HEAD
+[v1.0.12]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.11...v1.0.12
 [v1.0.11]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.10...v1.0.11
 [v1.0.10]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.9...v1.0.10
 [v1.0.9]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.8...v1.0.9

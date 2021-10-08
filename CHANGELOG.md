@@ -7,6 +7,12 @@ All notable changes to this project will be documented in this file.
 
 
 
+<a name="v1.0.13"></a>
+## [v1.0.13] - 2021-10-08
+
+- Create FUNDING.yml
+
+
 <a name="v1.0.12"></a>
 ## [v1.0.12] - 2021-05-10
 
@@ -135,7 +141,8 @@ All notable changes to this project will be documented in this file.
 - Initial commit
 
 
-[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.12...HEAD
+[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.13...HEAD
+[v1.0.13]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.12...v1.0.13
 [v1.0.12]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.11...v1.0.12
 [v1.0.11]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.10...v1.0.11
 [v1.0.10]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.9...v1.0.10

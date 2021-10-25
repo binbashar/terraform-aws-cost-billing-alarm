@@ -25,32 +25,43 @@ If `aws_sns_topic_enabled = true` then you'll still need to subscribe to the cre
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.28 |
-| aws | >= 2.70.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.28 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 2.70.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | >= 2.70.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 2.70.0 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_cloudwatch_metric_alarm.account_billing_alarm](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_metric_alarm) | resource |
+| [aws_sns_topic.sns_alert_topic](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| aws\_account\_id | AWS account id | `string` | `""` | no |
-| aws\_env | AWS environment you are deploying to. Will be appended to SNS topic and alarm name. (e.g. dev, stage, prod) | `string` | n/a | yes |
-| aws\_sns\_topic\_arn | If aws\_sns\_topic\_enabled = false, then an existing AWS SNS topic ARN for the billing alert integration will be used | `string` | `""` | no |
-| currency | Short notation for currency type (e.g. USD, CAD, EUR) | `string` | `"USD"` | no |
-| monthly\_billing\_threshold | The threshold for which estimated monthly charges will trigger the metric alarm. | `string` | n/a | yes |
-| tags | A mapping of tags to assign to all resources | `map(string)` | `{}` | no |
+| <a name="input_aws_account_id"></a> [aws\_account\_id](#input\_aws\_account\_id) | AWS account id | `string` | `null` | no |
+| <a name="input_aws_env"></a> [aws\_env](#input\_aws\_env) | AWS environment you are deploying to. Will be appended to SNS topic and alarm name. (e.g. dev, stage, prod) | `string` | n/a | yes |
+| <a name="input_create_sns_topic"></a> [create\_sns\_topic](#input\_create\_sns\_topic) | Creates a SNS Topic if `true`. | `bool` | `true` | no |
+| <a name="input_currency"></a> [currency](#input\_currency) | Short notation for currency type (e.g. USD, CAD, EUR) | `string` | `"USD"` | no |
+| <a name="input_monthly_billing_threshold"></a> [monthly\_billing\_threshold](#input\_monthly\_billing\_threshold) | The threshold for which estimated monthly charges will trigger the metric alarm. | `string` | n/a | yes |
+| <a name="input_sns_topic_arns"></a> [sns\_topic\_arns](#input\_sns\_topic\_arns) | List of SNS topic ARNs to be used. If `create_sns_topic` is `true`, it merges the created SNS Topic by this module with this list of ARNs | `list(string)` | `[]` | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to all resources | `map(string)` | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| sns\_topic\_arn | SNS Topic ARN to be subscribed to in order to delivery the clodwatch billing alarms |
-
+| <a name="output_sns_topic_arn"></a> [sns\_topic\_arn](#output\_sns\_topic\_arn) | SNS Topic ARN to be subscribed to in order to delivery the clodwatch billing alarms |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 The module outputs one block,.sns_topic_arn. Access it like this:

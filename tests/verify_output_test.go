@@ -8,7 +8,7 @@ import (
 )
 
 func TestAWSBudget(t *testing.T) {
-    expectedBudgetSnsTopicArn := "arn:aws:sns:us-east-1:523857393444:billing-alarm-notification-usd-bb-dev-deploymaster"
+    expectedBudgetSnsTopicArn := "[arn:aws:sns:us-east-1:523857393444:billing-alarm-notification-usd-bb-dev-deploymaster]"
 
     terraformOptions := &terraform.Options {
         // The path to where our Terraform code is located

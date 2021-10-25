@@ -64,11 +64,11 @@ No modules.
 | <a name="output_sns_topic_arns"></a> [sns\_topic\_arns](#output\_sns\_topic\_arns) | List of SNS Topic ARNs to be subscribed to in order to delivery the clodwatch billing alarms |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
-The module outputs one block,.sns_topic_arn. Access it like this:
+The module outputs one block, sns_topic_arns. Access it like this:
 
 ```
-output "sns_topic_arn" {
-  value = "${module.billing_alert.sns_topic_arn}"
+output "sns_topic_arns" {
+  value = module.billing_alert.sns_topic_arns
 }
 ```
 

@@ -32,14 +32,13 @@ when you don't need these resources.
 
 | Name | Description |
 |------|-------------|
-| sns\_topic\_arn | SNS Topic ARN to be subscribed to in order to delivery the clodwatch billing alarms
+| sns\_topic\_arns | List of SNS Topic ARNs to be subscribed to in order to delivery the clodwatch billing alarms |
 
-The module outputs one block, sns_topic. Access it like this:
-
+The module outputs one block, sns_topic_arns. Access it like this:
 
 ```
-output "sns_topic" {
-  value = module.billing_alert.sns_topic
+output "sns_topic_arns" {
+  value = module.billing_alert.sns_topic_arns
 }
 ```
 

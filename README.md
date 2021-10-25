@@ -61,7 +61,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_sns_topic_arn"></a> [sns\_topic\_arn](#output\_sns\_topic\_arn) | SNS Topic ARN to be subscribed to in order to delivery the clodwatch billing alarms |
+| <a name="output_sns_topic_arns"></a> [sns\_topic\_arns](#output\_sns\_topic\_arns) | List of SNS Topic ARNs to be subscribed to in order to delivery the clodwatch billing alarms |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 The module outputs one block,.sns_topic_arn. Access it like this:

@@ -8,7 +8,7 @@ import (
 )
 
 func TestAWSBudget(t *testing.T) {
-    expectedBudgetSnsTopicArn := "[arn:aws:sns:us-east-1:523857393444:billing-alarm-notification-usd-bb-dev-deploymaster]"
+    expectedBudgetSnsTopicArn := []string{"arn:aws:sns:us-east-1:523857393444:billing-alarm-notification-usd-bb-dev-deploymaster}"
 
     terraformOptions := &terraform.Options {
         // The path to where our Terraform code is located
@@ -25,7 +25,7 @@ func TestAWSBudget(t *testing.T) {
     terraform.InitAndApply(t, terraformOptions)
 
     // Run `terraform output` to get the values of output variables
-    actualBudgetSnsTopicArn       := terraform.Output(t, terraformOptions, "budget_sns_topic_arn")
+    actualBudgetSnsTopicArn       := terraform.OutputList(t, terraformOptions, "budget_sns_topic_arn")
 
 
     // Verify we're getting back the outputs we expect

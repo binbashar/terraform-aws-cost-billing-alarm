@@ -7,6 +7,26 @@ All notable changes to this project will be documented in this file.
 
 
 
+<a name="v1.0.14"></a>
+## [v1.0.14] - 2021-10-26
+
+- Comment unused imports
+- Remove AWS Account ID variable to Terrastest (golang)
+- Pass AWS Account ID to Terrastest (golang)
+- Fix Dev Account ID for deploying the Terratest resources
+- Change Terratest comparison to lists
+- Change to string comparision in Terratests
+- Fix wrong list definition in Terratests
+- Change Terratest comparison to lists
+- Fix expected value for Terratest
+- Update CirceCI pipeline for Terrattest & TF 0.14.11
+- Update Terratest code to TF 0.14.11
+- Update Terraform verstion for Terratest
+- Update README
+- Update module outputs
+- * Logic refactor to use a single resource block * Add support to list of SNS Topics
+
+
 <a name="v1.0.13"></a>
 ## [v1.0.13] - 2021-10-08
 
@@ -141,7 +161,8 @@ All notable changes to this project will be documented in this file.
 - Initial commit
 
 
-[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.13...HEAD
+[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.14...HEAD
+[v1.0.14]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.13...v1.0.14
 [v1.0.13]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.12...v1.0.13
 [v1.0.12]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.11...v1.0.12
 [v1.0.11]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.10...v1.0.11

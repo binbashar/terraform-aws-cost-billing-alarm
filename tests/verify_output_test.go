@@ -2,13 +2,17 @@ package tests
 
 import (
     "testing"
+    "os"
+    "fmt"
 
     "github.com/gruntwork-io/terratest/modules/terraform"
     "github.com/stretchr/testify/assert"
 )
 
 func TestAWSBudget(t *testing.T) {
-    expectedBudgetSnsTopicArn := "arn:aws:sns:us-east-1:523857393444:billing-alarm-notification-usd-bb-dev-deploymaster"
+
+    //expectedBudgetSnsTopicArn := "arn:aws:sns:us-east-1:523857393444:billing-alarm-notification-usd-bb-dev-deploymaster"
+    expectedBudgetSnsTopicArn := fmt.Sprintf("arn:aws:sns:us-east-1:%s:billing-alarm-notification-usd-bb-dev-deploymaster", os.Getenv("AWS_ACCOUNT_ID"))
     expectedList := []string{expectedBudgetSnsTopicArn}
 
     terraformOptions := &terraform.Options {
@@ -26,10 +30,8 @@ func TestAWSBudget(t *testing.T) {
     terraform.InitAndApply(t, terraformOptions)
 
     // Run `terraform output` to get the values of output variables
-    //actualBudgetSnsTopicArn := terraform.Output(t, terraformOptions, "budget_sns_topic_arn")
     actualList       := terraform.OutputList(t, terraformOptions, "budget_sns_topic_arn")
 
     // Verify we're getting back the outputs we expect
-    //assert.Equal(t, expectedBudgetSnsTopicArn, actualBudgetSnsTopicArn)
     assert.Equal(t, expectedList, actualList)
 }

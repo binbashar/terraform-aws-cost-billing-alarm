@@ -11,8 +11,8 @@ import (
 
 func TestAWSBudget(t *testing.T) {
 
-    //expectedBudgetSnsTopicArn := "arn:aws:sns:us-east-1:523857393444:billing-alarm-notification-usd-bb-dev-deploymaster"
-    expectedBudgetSnsTopicArn := fmt.Sprintf("arn:aws:sns:us-east-1:%s:billing-alarm-notification-usd-bb-dev-deploymaster", os.Getenv("AWS_ACCOUNT_ID"))
+    //expectedBudgetSnsTopicArn := fmt.Sprintf("arn:aws:sns:us-east-1:%s:billing-alarm-notification-usd-bb-dev-deploymaster", os.Getenv("AWS_ACCOUNT_ID"))
+    expectedBudgetSnsTopicArn := "arn:aws:sns:us-east-1:523857393444:billing-alarm-notification-usd-bb-dev-deploymaster"
     expectedList := []string{expectedBudgetSnsTopicArn}
 
     terraformOptions := &terraform.Options {

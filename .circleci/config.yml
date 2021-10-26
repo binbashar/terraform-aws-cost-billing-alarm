@@ -85,7 +85,8 @@ jobs:
 
       - run:
           name: test-terratests-go-test
-          command: make AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID_DEV terratest-go-test
+          #command: make AWS_ACCOUNT_ID=$AWS_ACCOUNT_ID_DEV terratest-go-test
+          command: make terratest-go-test
 
       - slack/notify:
           event: fail

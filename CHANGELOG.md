@@ -7,6 +7,12 @@ All notable changes to this project will be documented in this file.
 
 
 
+<a name="v1.0.16"></a>
+## [v1.0.16] - 2023-06-26
+
+- Fix/issue-18: Add new variable to set datapoints_to_alarm attribute
+
+
 <a name="v1.0.15"></a>
 ## [v1.0.15] - 2022-08-23
 
@@ -167,7 +173,8 @@ All notable changes to this project will be documented in this file.
 - Initial commit
 
 
-[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.15...HEAD
+[Unreleased]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.16...HEAD
+[v1.0.16]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.15...v1.0.16
 [v1.0.15]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.14...v1.0.15
 [v1.0.14]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.13...v1.0.14
 [v1.0.13]: https://github.com/binbashar/terraform-aws-cost-billing-alarm/compare/v1.0.12...v1.0.13

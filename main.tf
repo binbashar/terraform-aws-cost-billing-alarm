@@ -32,6 +32,7 @@ resource "aws_cloudwatch_metric_alarm" "account_billing_alarm" {
   statistic           = lookup(local.alarm, "statistic", "Maximum")
   threshold           = lookup(local.alarm, "threshold")
   alarm_actions       = lookup(local.alarm, "alarm_actions")
+  datapoints_to_alarm = var.datapoints_to_alarm
 
   dimensions = {
     Currency      = lookup(lookup(local.alarm, "dimensions"), "currency")

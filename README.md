@@ -51,6 +51,7 @@ No modules.
 | <a name="input_currency"></a> [currency](#input\_currency) | Short notation for currency type (e.g. USD, CAD, EUR) | `string` | `"USD"` | no |
 | <a name="input_monthly_billing_threshold"></a> [monthly\_billing\_threshold](#input\_monthly\_billing\_threshold) | The threshold for which estimated monthly charges will trigger the metric alarm. | `string` | n/a | yes |
 | <a name="input_sns_topic_arns"></a> [sns\_topic\_arns](#input\_sns\_topic\_arns) | List of SNS topic ARNs to be used. If `create_sns_topic` is `true`, it merges the created SNS Topic by this module with this list of ARNs | `list(string)` | `[]` | no |
+| <a name="input_datapoints_to_alarm"></a> [datapoints\_to\_alarm](#input\_datapoint\_to\_alarm) | The number of datapoints that must be breaching to trigger the alarm. | `number` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A mapping of tags to assign to all resources | `map(string)` | `{}` | no |
 
 ## Outputs

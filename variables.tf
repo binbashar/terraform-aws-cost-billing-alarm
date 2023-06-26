@@ -23,6 +23,12 @@ variable "aws_account_id" {
   default     = null
 }
 
+variable "datapoints_to_alarm" {
+  description = "The number of datapoints that must be breaching to trigger the alarm."
+  type        = number
+  default     = null
+}
+
 #=============================#
 # SNS                         #
 #=============================#
